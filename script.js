@@ -1,5 +1,37 @@
+// ==================== 共用導覽欄 ====================
+function renderSiteNavigation() {
+  const nav = document.querySelector('nav[data-site-nav]');
+  if (!nav) return;
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navItems = [
+    ['index.html', '首頁'],
+    ['education.html', '教育背景'],
+    ['experience.html', '實務經驗'],
+    ['skills.html', '專業技能'],
+    ['projects.html', '專案作品'],
+    ['articles.html', '文章'],
+    ['awards.html', '獲獎榮譽'],
+    ['photos.html', '活動照片']
+  ];
+
+  nav.innerHTML = `
+    <div class="container">
+      <a href="index.html" class="logo">My Portfolio</a>
+      <ul>
+        ${navItems.map(([href, label]) => {
+          const activeClass = href === currentPage ? 'active' : '';
+          return `<li><a href="${href}" class="${activeClass}">${label}</a></li>`;
+        }).join('')}
+      </ul>
+    </div>
+  `;
+}
+
 // ==================== 頁面加載效果 ====================
 document.addEventListener('DOMContentLoaded', function() {
+  renderSiteNavigation();
+
   // 頁面平滑過渡
   document.body.style.opacity = '0';
   document.body.style.transition = 'opacity 0.5s ease';
@@ -48,7 +80,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ==================== 導航欄高亮 ====================
 window.addEventListener('scroll', function() {
   const sections = document.querySelectorAll('.section');
-  const navLinks = document.querySelectorAll('nav a');
+  const navLinks = document.querySelectorAll('nav[data-site-nav] a');
 
   let current = '';
   sections.forEach(section => {
@@ -57,6 +89,8 @@ window.addEventListener('scroll', function() {
       current = section.getAttribute('id');
     }
   });
+
+  if (!current) return;
 
   navLinks.forEach(link => {
     link.classList.remove('active');
