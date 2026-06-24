@@ -28,9 +28,20 @@ function renderSiteNavigation() {
   `;
 }
 
+function resetScrollPosition() {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
 // ==================== 頁面加載效果 ====================
 document.addEventListener('DOMContentLoaded', function() {
   renderSiteNavigation();
+  resetScrollPosition();
 
   // 頁面平滑過渡
   document.body.style.opacity = '0';
@@ -42,6 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // 初始化動畫
   animateSkillBars();
   animateCounters();
+});
+
+window.addEventListener('load', function() {
+  resetScrollPosition();
+  setTimeout(resetScrollPosition, 0);
 });
 
 // ==================== 技能欄動畫 ====================
