@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人網站 - 資訊管理專業</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ==================== 導航欄 ==================== -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">My Portfolio</a>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="education.html">教育背景</a></li>
+        <li><a href="experience.html">經驗實習</a></li>
+        <li><a href="skills.html">專業技能</a></li>
+        <li><a href="projects.html">專案作品</a></li>
+        <li><a href="articles.html">文章</a></li>
+        <li><a href="awards.html">獲獎榮譽</a></li>
+        <li><a href="photos.html">活動照片</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== 英雄部分 ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <!-- 請將此處替換為您的照片 -->
+      <img src="assets/images/profile.jpg" alt="個人照片" class="profile-image" 
+           onerror="this.style.display='none'">
+      <h1>歡迎來到我的個人網站</h1>
+      <p>資訊管理專業｜熱情編程者｜終身學習者</p>
+      <p>探索我的教育背景、工作經驗、技能和專案成果</p>
+    </div>
+  </section>
+
+  <!-- ==================== 主要內容 ==================== -->
+  <div class="container">
+    <!-- 自我介紹部分 -->
+    <section class="section" id="about">
+      <h2>關於我</h2>
+      
+      <div class="card">
+        <h3>👋 自我介紹</h3>
+        <p>
+          你好！我是一位熱情的資訊管理專業學生，對科技和創新充滿興趣。
+          我致力於將所學知識應用到實際專案中，並不斷探索資訊技術的新領域。
+        </p>
+        <p>
+          我相信通過持續學習和實踐，可以為企業創造價值。
+          我對系統設計、資料管理、網頁開發等領域特別感興趣。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎯 個人目標</h3>
+        <ul>
+          <li>掌握現代軟體開發技術和最佳實踐</li>
+          <li>建立全棧開發能力</li>
+          <li>參與有意義的商業專案</li>
+          <li>成為資訊系統領域的專家</li>
+          <li>為技術社群做出貢獻</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>💡 主要興趣</h3>
+        <ul>
+          <li>Web 應用開發</li>
+          <li>資料庫設計和管理</li>
+          <li>人工智慧和機器學習</li>
+          <li>雲端計算和微服務</li>
+          <li>前端使用者介面設計</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 統計資訊 -->
+    <section class="section">
+      <h2>快速統計</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="font-size: 2rem; color: var(--secondary-color);">
+            <span class="counter" data-target="15">0</span>+
+          </h4>
+          <p>已完成專案</p>
+        </div>
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="font-size: 2rem; color: var(--secondary-color);">
+            <span class="counter" data-target="8">0</span>
+          </h4>
+          <p>專業技能</p>
+        </div>
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="font-size: 2rem; color: var(--secondary-color);">
+            <span class="counter" data-target="12">0</span>+
+          </h4>
+          <p>工作/實習月數</p>
+        </div>
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="font-size: 2rem; color: var(--secondary-color);">
+            <span class="counter" data-target="5">0</span>+
+          </h4>
+          <p>獲得獎項</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 快速連結 -->
+    <section class="section">
+      <h2>進一步了解</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div class="card">
+          <h3>🎓 教育背景</h3>
+          <p>了解我的學歷、學位和主修課程</p>
+          <a href="education.html" class="btn" style="margin-top: 1rem;">查看詳情</a>
+        </div>
+        <div class="card">
+          <h3>💼 工作經驗</h3>
+          <p>探索我的實習和工作經驗</p>
+          <a href="experience.html" class="btn" style="margin-top: 1rem;">查看詳情</a>
+        </div>
+        <div class="card">
+          <h3>🛠️ 技能</h3>
+          <p>我掌握的程式語言和技術</p>
+          <a href="skills.html" class="btn" style="margin-top: 1rem;">查看詳情</a>
+        </div>
+        <div class="card">
+          <h3>📱 專案作品</h3>
+          <p>查看我完成的有趣專案</p>
+          <a href="projects.html" class="btn" style="margin-top: 1rem;">查看詳情</a>
+        </div>
+        <div class="card">
+          <h3>📚 文章</h3>
+          <p>閱讀我對技術的見解和想法</p>
+          <a href="articles.html" class="btn" style="margin-top: 1rem;">查看詳情</a>
+        </div>
+        <div class="card">
+          <h3>⭐ 獲獎與榮譽</h3>
+          <p>我的成就和認可</p>
+          <a href="awards.html" class="btn" style="margin-top: 1rem;">查看詳情</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== 頁尾 ==================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 個人網站。版權所有。</p>
+      <p>聯絡方式：<a href="mailto:your.email@example.com" style="color: var(--secondary-color);">your.email@example.com</a></p>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" title="GitHub">🐙</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">🐦</a>
+        <a href="https://facebook.com" target="_blank" title="Facebook">📘</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

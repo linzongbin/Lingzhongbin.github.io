@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>活動照片 - 個人網站</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #photoModal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      overflow: hidden;
+      animation: slideIn 0.3s ease;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2001;
+      transition: all 0.3s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--accent-color);
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================== 導航欄 ==================== -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">My Portfolio</a>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="education.html">教育背景</a></li>
+        <li><a href="experience.html">經驗實習</a></li>
+        <li><a href="skills.html">專業技能</a></li>
+        <li><a href="projects.html">專案作品</a></li>
+        <li><a href="articles.html">文章</a></li>
+        <li><a href="awards.html">獲獎榮譽</a></li>
+        <li><a href="photos.html">活動照片</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== 英雄部分 ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>活動照片</h1>
+      <p>記錄我參與的各類校園和行業活動</p>
+    </div>
+  </section>
+
+  <!-- ==================== 主要內容 ==================== -->
+  <div class="container">
+    <!-- 照片說明 -->
+    <section class="section">
+      <h2>我的活動瞬間</h2>
+      <p>
+        這些照片記錄了我在學校和工作中參與的各類活動。
+        從技術競賽到校園活動，從國際交流到社區服務，
+        這些經驗豐富了我的人生，並幫助我不斷成長。
+      </p>
+      <p style="color: var(--light-text); margin-top: 1rem;">
+        💡 提示：點擊照片可以放大查看
+      </p>
+    </section>
+
+    <!-- 校園活動 -->
+    <section class="section">
+      <h2>🎓 校園活動</h2>
+      
+      <div class="photos-grid">
+        <div class="photo-item">
+          <img src="assets/images/campus-1.jpg" alt="程式設計競賽"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Campus+Activity+1'">
+          <div class="photo-caption">
+            <strong>校內程式設計大賽</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 獲得冠軍</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/campus-2.jpg" alt="技術分享會"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Campus+Activity+2'">
+          <div class="photo-caption">
+            <strong>校園技術分享會</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 分享微服務知識</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/campus-3.jpg" alt="畢業典禮"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Campus+Activity+3'">
+          <div class="photo-caption">
+            <strong>畢業典禮</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 優秀畢業生</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/campus-4.jpg" alt="開源軟體工作坊"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Campus+Activity+4'">
+          <div class="photo-caption">
+            <strong>開源軟體工作坊</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年秋季</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/campus-5.jpg" alt="系學會活動"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Campus+Activity+5'">
+          <div class="photo-caption">
+            <strong>系學會活動</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 系會主席</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/campus-6.jpg" alt="程式設計社聚會"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Campus+Activity+6'">
+          <div class="photo-caption">
+            <strong>程式設計社聚會</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年冬季</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 競賽活動 -->
+    <section class="section">
+      <h2>🏆 競賽活動</h2>
+      
+      <div class="photos-grid">
+        <div class="photo-item">
+          <img src="assets/images/competition-1.jpg" alt="全國程式設計大賽"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Competition+1'">
+          <div class="photo-caption">
+            <strong>全國程式設計大賽</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 一等獎</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/competition-2.jpg" alt="黑客馬拉松"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Competition+2'">
+          <div class="photo-caption">
+            <strong>黑客馬拉松</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2021年 - 優勝獎</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/competition-3.jpg" alt="創意應用大賽"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Competition+3'">
+          <div class="photo-caption">
+            <strong>創意應用大賽</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 特別獎</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/competition-4.jpg" alt="Web開發技能大賽"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Competition+4'">
+          <div class="photo-caption">
+            <strong>Web開發技能大賽</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2022年 - 二等獎</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/competition-5.jpg" alt="頒獎典禮"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Competition+5'">
+          <div class="photo-caption">
+            <strong>頒獎典禮</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 領獎現場</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/competition-6.jpg" alt="商業分析案例大賽"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Competition+6'">
+          <div class="photo-caption">
+            <strong>商業分析案例大賽</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2022年 - 優秀獎</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 實習和工作 -->
+    <section class="section">
+      <h2>💼 實習和工作活動</h2>
+      
+      <div class="photos-grid">
+        <div class="photo-item">
+          <img src="assets/images/work-1.jpg" alt="公司團隊合照"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Work+Activity+1'">
+          <div class="photo-caption">
+            <strong>公司團隊合照</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 團隊建設活動</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/work-2.jpg" alt="技術分享會"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Work+Activity+2'">
+          <div class="photo-caption">
+            <strong>內部技術分享會</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 分享微服務架構</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/work-3.jpg" alt="客戶演示"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Work+Activity+3'">
+          <div class="photo-caption">
+            <strong>客戶產品演示</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 系統展示</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/work-4.jpg" alt="年度頒獎"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Work+Activity+4'">
+          <div class="photo-caption">
+            <strong>年度頒獎典禮</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 技術貢獻獎</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/work-5.jpg" alt="實習期間"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Work+Activity+5'">
+          <div class="photo-caption">
+            <strong>實習期間合照</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年夏季 - 電商公司</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/work-6.jpg" alt="項目啟動會"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Work+Activity+6'">
+          <div class="photo-caption">
+            <strong>項目啟動會</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 新項目開始</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 交流活動 -->
+    <section class="section">
+      <h2>🌍 國際交流與研修</h2>
+      
+      <div class="photos-grid">
+        <div class="photo-item">
+          <img src="assets/images/exchange-1.jpg" alt="新加坡南洋理工大學"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Exchange+1'">
+          <div class="photo-caption">
+            <strong>南洋理工大學</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年秋季交換生</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/exchange-2.jpg" alt="日本東京大學"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Exchange+2'">
+          <div class="photo-caption">
+            <strong>東京大學研修</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年夏季 - AI和IoT研習營</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/exchange-3.jpg" alt="文化體驗"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Exchange+3'">
+          <div class="photo-caption">
+            <strong>文化交流活動</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 國際學生聚會</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/exchange-4.jpg" alt="國際會議"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Exchange+4'">
+          <div class="photo-caption">
+            <strong>國際技術會議</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 參展合照</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/exchange-5.jpg" alt="學術交流"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Exchange+5'">
+          <div class="photo-caption">
+            <strong>學術交流講座</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 論文發表</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/exchange-6.jpg" alt="國際合作"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Exchange+6'">
+          <div class="photo-caption">
+            <strong>國際合作項目</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 跨國團隊</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 社區服務 -->
+    <section class="section">
+      <h2>🤝 社區服務和志願活動</h2>
+      
+      <div class="photos-grid">
+        <div class="photo-item">
+          <img src="assets/images/volunteer-1.jpg" alt="編程工作坊"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Volunteer+1'">
+          <div class="photo-caption">
+            <strong>中學編程工作坊</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 指導學生</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/volunteer-2.jpg" alt="社區教學"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Volunteer+2'">
+          <div class="photo-caption">
+            <strong>社區技術教學</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 分享知識</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/volunteer-3.jpg" alt="偏遠地區支教"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Volunteer+3'">
+          <div class="photo-caption">
+            <strong>偏遠地區支教</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 編程教育</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/volunteer-4.jpg" alt="開源貢獻"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Volunteer+4'">
+          <div class="photo-caption">
+            <strong>開源社區貢獻</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 技術分享</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/volunteer-5.jpg" alt="公益項目"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Volunteer+5'">
+          <div class="photo-caption">
+            <strong>公益項目</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2024年 - 社會責任</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/volunteer-6.jpg" alt="技術聯誼會"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Volunteer+6'">
+          <div class="photo-caption">
+            <strong>技術社區聯誼會</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">2023年 - 行業交流</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 個人生活瞬間 -->
+    <section class="section">
+      <h2>📸 生活瞬間</h2>
+      
+      <div class="photos-grid">
+        <div class="photo-item">
+          <img src="assets/images/life-1.jpg" alt="校園漫步"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Life+1'">
+          <div class="photo-caption">
+            <strong>校園漫步</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">享受校園生活</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/life-2.jpg" alt="圖書館學習"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Life+2'">
+          <div class="photo-caption">
+            <strong>圖書館學習</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">孜孜不倦的學習</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/life-3.jpg" alt="朋友聚會"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Life+3'">
+          <div class="photo-caption">
+            <strong>朋友聚會</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">珍貴的友誼時光</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/life-4.jpg" alt="戶外運動"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Life+4'">
+          <div class="photo-caption">
+            <strong>戶外運動</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">健康的生活方式</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/life-5.jpg" alt="旅行冒險"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Life+5'">
+          <div class="photo-caption">
+            <strong>旅行冒險</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">探索世界的足跡</p>
+          </div>
+        </div>
+
+        <div class="photo-item">
+          <img src="assets/images/life-6.jpg" alt="家庭時光"
+               onerror="this.src='https://via.placeholder.com/300x250?text=Life+6'">
+          <div class="photo-caption">
+            <strong>家庭時光</strong>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">溫暖的家庭瞬間</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 照片模態框 -->
+  <div id="photoModal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="放大照片">
+    </div>
+  </div>
+
+  <!-- ==================== 頁尾 ==================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 個人網站。版權所有。</p>
+      <p>聯絡方式：<a href="mailto:your.email@example.com" style="color: var(--secondary-color);">your.email@example.com</a></p>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" title="GitHub">🐙</a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">🐦</a>
+        <a href="https://facebook.com" target="_blank" title="Facebook">📘</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
