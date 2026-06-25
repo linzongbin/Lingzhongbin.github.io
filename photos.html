@@ -19,6 +19,7 @@
       box-shadow: var(--box-shadow);
       overflow: hidden;
       cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .simple-photo-card img {
@@ -26,6 +27,16 @@
       height: 220px;
       object-fit: cover;
       display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .simple-photo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .simple-photo-card:hover img {
+      transform: scale(1.06);
     }
 
     .simple-photo-caption {
@@ -68,6 +79,11 @@
       font-weight: bold;
       cursor: pointer;
       z-index: 2001;
+    }
+
+    .close-modal:hover {
+      color: var(--accent-color);
+      transform: scale(1.1);
     }
 
     @media (max-width: 768px) {
