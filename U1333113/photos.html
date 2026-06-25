@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>活動照片 - 個人網站</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .simple-photos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .simple-photo-card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .simple-photo-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .simple-photo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .simple-photo-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .simple-photo-caption {
+      font-size: 0.9rem;
+      color: var(--light-text);
+      padding: 0.75rem 1rem;
+    }
+
+    #photoModal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-content img {
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2001;
+    }
+
+    .close-modal:hover {
+      color: var(--accent-color);
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .simple-photos-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================== 導航欄 ==================== -->
+  <nav data-site-nav></nav>
+
+  <!-- ==================== 開頭部分 ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>活動照片</h1>
+      <p>三張照片與簡短主題說明</p>
+    </div>
+  </section>
+
+  <!-- ==================== 主要內容 ==================== -->
+  <div class="container">
+    <section class="section">
+      <h2>照片區塊</h2>
+      <div class="simple-photos-grid">
+        <div class="simple-photo-card">
+          <img src="images/Activity.jpg" alt="照片 1" onerror="this.src='https://via.placeholder.com/600x400?text=Photo+1'">
+          <p class="simple-photo-caption">考取專業證照考試前的練習照片。</p>
+        </div>
+
+        <div class="simple-photo-card">
+          <img src="images/microbit.jpg" alt="照片 2" onerror="this.src='https://via.placeholder.com/600x400?text=Photo+2'">
+          <p class="simple-photo-caption">micro:bit體驗活動，使用micro:bit結合Google地圖做的藍芽應用。</p>
+        </div>
+
+        <div class="simple-photo-card">
+          <img src="images/AR.jpg" alt="照片 3" onerror="this.src='https://via.placeholder.com/600x400?text=Photo+3'">
+          <p class="simple-photo-caption">學校舉辦的增強實境體驗活動，展示最新的AR技術應用。</p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+ <div id="photoModal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="放大照片">
+    </div>
+  </div>
+
+  <!-- ==================== 頁尾 ==================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 個人網站。版權所有。</p>
+      <p>聯絡方式：<a href="mailto:your.email@example.com" style="color: var(--secondary-color);">zhongbinlin6@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://github.com/linzongbin" target="_blank" title="GitHub">🐙</a>
+        <a href="https://www.instagram.com/lin.nil_126/?hl=zh-tw" target="_blank" title="Instagram">📸</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

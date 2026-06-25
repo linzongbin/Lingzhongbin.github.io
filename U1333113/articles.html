@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章 - 個人網站</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ==================== 導航欄 ==================== -->
+  <nav data-site-nav></nav>
+
+  <!-- ==================== 部分 ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>技術文章與見解</h1>
+      <p>分享我對技術和行業的思考和觀點</p>
+    </div>
+  </section>
+
+  <!-- ==================== 主要內容 ==================== -->
+  <div class="container">
+    <!-- 文章簡介 -->
+    <section class="section">
+      <h2>關於我的文章</h2>
+      <p>
+        我在這裡分享我在軟體開發、系統設計、技術學習等方面的思考和經驗。
+        這些文章反映了我對技術的理解和職業發展過程中的洞察。
+        我希望這些文章能幫助其他開發人員和學習者。
+      </p>
+    </section>
+
+    <!-- 精選文章 -->
+    <section class="section">
+      <h2>精選文章</h2>
+
+      <!-- 文章 1 -->
+      <div class="article-card">
+        <div class="article-header">
+          <h3>🏗️ 微服務架構實踐：從單體到分散式</h3>
+          <p class="article-date">2024 年 5 月 15 日</p>
+        </div>
+        <div class="article-body">
+          <img src="assets/images/microservices.jpg" alt="微服務架構" class="article-image"
+               onerror="this.style.display='none'">
+          <p>
+            <strong>摘要：</strong>
+            本文介紹了如何將傳統的單體應用遷移到微服務架構。
+            包括架構設計原則、服務分割策略、通信方式、數據管理等重要方面。
+          </p>
+          <p>
+            隨著業務增長，單體應用的局限性逐漸顯現。本文分享了我在公司進行微服務改造的實踐經驗，
+            包括：
+          </p>
+          <ul>
+            <li>如何識別服務邊界和分割業務功能</li>
+            <li>服務間通信的多種方式（REST、消息隊列、gRPC）</li>
+            <li>數據一致性和分布式事務的解決方案</li>
+            <li>服務監控、日誌和追蹤</li>
+            <li>容器化部署和 Kubernetes 編排</li>
+          </ul>
+          <p>
+            通過微服務改造，系統的可擴展性和開發效率得到了顯著提升。
+            這個過程中也遇到了許多挑戰，包括複雜性增加、分散式系統的問題等。
+          </p>
+          <a href="#" style="color: var(--secondary-color); font-weight: 500;">閱讀完整文章 →</a>
+        </div>
+      </div>
+
+      <!-- 文章 2 -->
+      <div class="article-card">
+        <div class="article-header">
+          <h3>⚡ 資料庫查詢優化的 10 大技巧</h3>
+          <p class="article-date">2024 年 4 月 28 日</p>
+        </div>
+        <div class="article-body">
+          <img src="assets/images/database-optimization.jpg" alt="資料庫優化" class="article-image"
+               onerror="this.style.display='none'">
+          <p>
+            <strong>摘要：</strong>
+            資料庫性能是系統整體性能的關鍵。本文分享了在實際項目中應用的 10 個有效的查詢優化技巧。
+          </p>
+          <p>
+            優化並不是一次性的工作，而是一個持續的過程。以下是我在多個項目中驗證過的最佳實踐：
+          </p>
+          <ul>
+            <li><strong>1. 合理使用索引</strong> - 創建適當的索引，避免冗余索引</li>
+            <li><strong>2. 查詢計劃分析</strong> - 使用 EXPLAIN 分析查詢計劃</li>
+            <li><strong>3. 避免全表掃描</strong> - 通過適當的條件減少掃描範圍</li>
+            <li><strong>4. JOIN 優化</strong> - 合理使用 JOIN，注意關聯順序</li>
+            <li><strong>5. 子查詢優化</strong> - 使用 JOIN 替代某些子查詢</li>
+            <li><strong>6. 分頁查詢</strong> - 對大結果集進行合理分頁</li>
+            <li><strong>7. 緩存策略</strong> - 使用 Redis 等緩存熱點數據</li>
+            <li><strong>8. 異步查詢</strong> - 對不需要實時的查詢進行異步處理</li>
+            <li><strong>9. 分片策略</strong> - 對大表進行分片提升性能</li>
+            <li><strong>10. 定期維護</strong> - 重建索引、分析表統計信息</li>
+          </ul>
+          <p>
+            這些技巧幫助我們將某個系統的查詢平均響應時間從 800ms 降低到 200ms。
+          </p>
+          <a href="#" style="color: var(--secondary-color); font-weight: 500;">閱讀完整文章 →</a>
+        </div>
+      </div>
+
+      <!-- 文章 3 -->
+      <div class="article-card">
+        <div class="article-header">
+          <h3>🚀 從零開始構建 DevOps 流程</h3>
+          <p class="article-date">2024 年 3 月 10 日</p>
+        </div>
+        <div class="article-body">
+          <img src="assets/images/devops.jpg" alt="DevOps" class="article-image"
+               onerror="this.style.display='none'">
+          <p>
+            <strong>摘要：</strong>
+            DevOps 是現代軟體開發的關鍵實踐。本文詳細介紹了如何從零開始構建一個完整的 CI/CD 流程。
+          </p>
+          <p>
+            傳統的瀑布式開發已經無法滿足現代業務的快速迭代需求。
+            本文分享了我們團隊建立 DevOps 流程的完整過程：
+          </p>
+          <ul>
+            <li><strong>版本控制</strong> - 使用 Git 和 GitHub 管理代碼</li>
+            <li><strong>自動化測試</strong> - 單元測試、集成測試和端到端測試</li>
+            <li><strong>持續集成</strong> - 使用 Jenkins 或 GitLab CI 自動構建</li>
+            <li><strong>構件管理</strong> - Artifactory 或 Nexus 管理構件</li>
+            <li><strong>容器化</strong> - Docker 容器化應用</li>
+            <li><strong>自動部署</strong> - 自動部署到測試、預發布和生產環境</li>
+            <li><strong>監控告警</strong> - 實時監控系統狀態和性能</li>
+            <li><strong>日誌分析</strong> - 集中收集和分析日誌</li>
+          </ul>
+          <p>
+            通過 DevOps 流程的建立，我們的部署頻率從每月一次提升到每週數次，
+            同時保持了較高的系統穩定性。
+          </p>
+          <a href="#" style="color: var(--secondary-color); font-weight: 500;">閱讀完整文章 →</a>
+        </div>
+      </div>
+
+      <!-- 文章 4 -->
+      <div class="article-card">
+        <div class="article-header">
+          <h3>🔒 Web 安全：常見漏洞和防護措施</h3>
+          <p class="article-date">2024 年 2 月 20 日</p>
+        </div>
+        <div class="article-body">
+          <img src="assets/images/web-security.jpg" alt="Web 安全" class="article-image"
+               onerror="this.style.display='none'">
+          <p>
+            <strong>摘要：</strong>
+            安全是軟體開發的重要方面。本文介紹了 Web 應用中最常見的安全漏洞和相應的防護措施。
+          </p>
+          <p>
+            安全威脅無處不在，了解常見漏洞是第一步。本文詳細介紹了 OWASP 十大風險和防護方法：
+          </p>
+          <ul>
+            <li><strong>SQL 注入</strong> - 使用參數化查詢防止注入攻擊</li>
+            <li><strong>跨站腳本 (XSS)</strong> - HTML 實體編碼和內容安全策略</li>
+            <li><strong>跨站請求偽造 (CSRF)</strong> - CSRF tokens 和 SameSite cookies</li>
+            <li><strong>認證/會話管理</strong> - 安全的密碼存儲和會話管理</li>
+            <li><strong>敏感數據洩露</strong> - 加密傳輸和存儲敏感數據</li>
+            <li><strong>XML 外部實體 (XXE)</strong> - 禁用 XML 解析功能</li>
+            <li><strong>破損的訪問控制</strong> - 實現適當的授權檢查</li>
+            <li><strong>組件漏洞</strong> - 定期更新依賴項</li>
+          </ul>
+          <p>
+            安全不是一次性工作，而是持續的過程。定期的安全審計和測試至關重要。
+          </p>
+          <a href="#" style="color: var(--secondary-color); font-weight: 500;">閱讀完整文章 →</a>
+        </div>
+      </div>
+
+      <!-- 文章 5 -->
+      <div class="article-card">
+        <div class="article-header">
+          <h3>📚 軟體工程最佳實踐：代碼質量管理</h3>
+          <p class="article-date">2024 年 1 月 15 日</p>
+        </div>
+        <div class="article-body">
+          <img src="assets/images/code-quality.jpg" alt="代碼質量" class="article-image"
+               onerror="this.style.display='none'">
+          <p>
+            <strong>摘要：</strong>
+            高質量的代碼是長期項目成功的基礎。本文分享了如何有效管理和提升代碼質量。
+          </p>
+          <p>
+            編寫代碼易，編寫好代碼難。高質量的代碼具有以下特徵：
+          </p>
+          <ul>
+            <li><strong>可讀性</strong> - 清晰的命名、結構和文檔</li>
+            <li><strong>可維護性</strong> - 模塊化設計、低耦合</li>
+            <li><strong>可測試性</strong> - 高覆蓋率的自動化測試</li>
+            <li><strong>性能</strong> - 適當的優化，避免過度優化</li>
+            <li><strong>安全性</strong> - 遵循安全最佳實踐</li>
+          </ul>
+          <p>
+            要提升代碼質量，需要建立有效的質量保證體系：
+          </p>
+          <ul>
+            <li>代碼審查流程</li>
+            <li>自動化測試框架</li>
+            <li>靜態代碼分析工具（SonarQube）</li>
+            <li>代碼風格檢查和格式化</li>
+            <li>文檔和知識庫維護</li>
+          </ul>
+          <a href="#" style="color: var(--secondary-color); font-weight: 500;">閱讀完整文章 →</a>
+        </div>
+      </div>
+
+      <!-- 文章 6 -->
+      <div class="article-card">
+        <div class="article-header">
+          <h3>🎓 技術學習之路：如何系統地學習編程</h3>
+          <p class="article-date">2023 年 12 月 5 日</p>
+        </div>
+        <div class="article-body">
+          <img src="assets/images/learning-path.jpg" alt="學習路徑" class="article-image"
+               onerror="this.style.display='none'">
+          <p>
+            <strong>摘要：</strong>
+            技術學習是一個持續的過程。本文分享了我個人的學習方法和經驗。
+          </p>
+          <p>
+            許多人在學習編程時感到困惑，不知道從何開始。以下是我的建議：
+          </p>
+          <ul>
+            <li><strong>基礎第一</strong> - 先掌握基本概念和語言特性</li>
+            <li><strong>邊做邊學</strong> - 通過實際項目學習</li>
+            <li><strong>閱讀優質代碼</strong> - 學習開源項目的設計和實現</li>
+            <li><strong>系統深化</strong> - 從廣泛學習逐步深化專業方向</li>
+            <li><strong>定期總結</strong> - 整理和分享學習成果</li>
+            <li><strong>持續實踐</strong> - 不斷挑戰更複雜的問題</li>
+          </ul>
+          <p>
+            最重要的是保持熱情和耐心。技術開發是一個長期的學習過程。
+          </p>
+          <a href="#" style="color: var(--secondary-color); font-weight: 500;">閱讀完整文章 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 文章分類 -->
+    <section class="section">
+      <h2>文章分類</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="color: var(--secondary-color);">18</h4>
+          <p>後端開發</p>
+        </div>
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="color: var(--secondary-color);">12</h4>
+          <p>前端開發</p>
+        </div>
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="color: var(--secondary-color);">15</h4>
+          <p>系統設計</p>
+        </div>
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="color: var(--secondary-color);">10</h4>
+          <p>技術工具</p>
+        </div>
+        <div class="card" style="text-align: center; border: none;">
+          <h4 style="color: var(--secondary-color);">8</h4>
+          <p>職業發展</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== 頁尾 ==================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 個人網站。版權所有。</p>
+      <p>聯絡方式：<a href="mailto:your.email@example.com" style="color: var(--secondary-color);">zhongbinlin6@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://github.com/linzongbin" target="_blank" title="GitHub">🐙</a>
+        <a href="https://www.instagram.com/lin.nil_126/?hl=zh-tw" target="_blank" title="Instagram">📸</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
