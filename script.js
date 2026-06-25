@@ -147,15 +147,16 @@ function animateCounters() {
 
 // ==================== 模態框 ====================
 const modal = document.getElementById('photoModal');
-const photos = document.querySelectorAll('.photo-item img');
+const photos = document.querySelectorAll('.photo-item img, .simple-photo-card img');
 const closeBtn = document.querySelector('.close-modal');
 
 if (modal) {
   photos.forEach(photo => {
     photo.addEventListener('click', function() {
       const modalImg = document.getElementById('modalImage');
+      if (!modalImg) return;
       modalImg.src = this.src;
-      modal.style.display = 'block';
+      modal.style.display = 'flex';
     });
   });
 

@@ -18,6 +18,7 @@
       border-radius: var(--border-radius);
       box-shadow: var(--box-shadow);
       overflow: hidden;
+      cursor: pointer;
     }
 
     .simple-photo-card img {
@@ -31,6 +32,42 @@
       font-size: 0.9rem;
       color: var(--light-text);
       padding: 0.75rem 1rem;
+    }
+
+    #photoModal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2001;
     }
 
     @media (max-width: 768px) {
@@ -48,7 +85,7 @@
   <section class="hero">
     <div class="hero-content">
       <h1>活動照片</h1>
-      <p>四張照片與簡短主題說明</p>
+      <p>三張照片與簡短主題說明</p>
     </div>
   </section>
 
@@ -60,7 +97,7 @@
         <div class="simple-photo-card">
           <img src="images/Activity.jpg" alt="照片 1"
                onerror="this.src='https://via.placeholder.com/600x400?text=Photo+1'">
-          <p class="simple-photo-caption">主題 1：校園活動 - 這裡放這張照片的小字說明。</p>
+          <p class="simple-photo-caption">考取專業證照考試前的練習照片。</p>
         </div>
 
         <div class="simple-photo-card">
@@ -72,10 +109,19 @@
         <div class="simple-photo-card">
           <img src="images/AR.jpg" alt="照片 3"
                onerror="this.src='https://via.placeholder.com/600x400?text=Photo+3'">
-          <p class="simple-photo-caption">主題 3：比賽紀錄 - 這裡放這張照片的小字說明。</p>
+          <p class="simple-photo-caption">學校舉辦的增強實境體驗活動，展示最新的AR技術應用。</p>
         </div>
 
+      </div>
     </section>
+  </div>
+
+  <!-- 照片模態框 -->
+  <div id="photoModal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="放大照片">
+    </div>
   </div>
 
   <!-- ==================== 頁尾 ==================== -->
